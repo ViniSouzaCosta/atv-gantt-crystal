@@ -7,20 +7,21 @@ gantt
     excludes weekends
 
     section Planejamento
-    Levantamento de Requisitos           :done,    reqs, 2025-10-01, 7d
-    Documentação Funcional e Layout      :active,  docs, after reqs, 10d
+    Levantamento de\nRequisitos           :done,    reqs, 2025-10-01, 7d
+    Documentação Funcional\n e Layout     :active,  docs, after reqs, 10d
 
     section Desenvolvimento
-    Configuração do Ambiente             :dev1, after docs, 7d
-    Criação do Banco de Dados            :dev2, after dev1, 10d
-    Módulo de Login                      :dev3, after dev2, 12d
-    CRUD de Empresas                     :dev4, after dev3, 14d
-    Upload de Logotipo                   :dev5, after dev4, 10d
-    Relatórios PDF/Excel                 :dev6, after dev5, 10d
-    Painel Administrativo                :dev7, after dev6, 12d
+    Configuração do\nAmbiente             :dev1, after docs, 7d
+    Criação do Banco\n de Dados           :dev2, after dev1, 10d
+    Módulo de Login\n(Autenticação)       :dev3, after dev2, 12d
+    CRUD de\nEmpresas                    :dev4, after dev3, 14d
+    Upload de\nLogotipo                  :dev5, after dev4, 10d
+    Relatórios\nPDF/Excel                :dev6, after dev5, 10d
+    Painel\nAdministrativo               :dev7, after dev6, 12d
 
     section Testes e Entrega
-    Testes Unitários e de Integração     :qa1, after dev7, 10d
-    Testes de Usabilidade                :qa2, after qa1, 7d
-    Implantação Final e Entrega          :deliver, after qa2, 5d
+    Testes Unitários\ne de Integração     :qa1, after dev7, 10d
+    Testes de\nUsabilidade               :qa2, after qa1, 7d
+    Implantação Final\ne Entrega          :deliver, after qa2, 5d
+
   ```
