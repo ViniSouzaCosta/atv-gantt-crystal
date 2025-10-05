@@ -22,7 +22,7 @@ gantt
     section Testes e Entrega
     Test. e Integ.             :qa1, after dev7, 10d
     Usabilidade                     :qa2, after qa1, 7d
-    Implantação Final               :deliver, after qa2, 5d
+    Impla. Final               :deliver, after qa2, 5d
 
 
 
