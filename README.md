@@ -31,14 +31,35 @@ gantt
   ```
 ```mermaid
 graph TD
-    subgraph Matriz
-    A1("C8"):::branco --> A2("C20"):::amarelo --> A3("V50"):::laranja --> A4("V100"):::vermelho
-    B1("D8"):::branco --> B2("C20"):::amarelo --> B3("E50"):::laranja --> B4("E100"):::vermelho
-    C1("D8"):::branco --> C2("D20"):::amarelo --> C3("D50"):::laranja --> C4("D100"):::vermelho
-    D1("C8"):::branco --> D2("C20"):::amarelo --> D3("C50"):::laranja --> D4("C100"):::vermelho
-    end
+    gantt
+    title Planejamento do Projeto - Sistema de Cadastro de Empresas Parceiras
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m-%d
 
-    classDef branco fill:#FFF, stroke:#000, stroke-width:1px;
+    section FASE 1: Documentação e Design
+    Levantamento de Requisitos    :a1, 2025-01-01, 1w
+    Documentação Funcional        :a2, after a1, 1w
+    Rascunhos e Layout Definitivo :a3, after a2, 1w
+
+    section FASE 2: Desenvolvimento - Entregas Incrementais
+    Configuração do Ambiente (Dev/DB/Git)  :d1, after a3, 1w
+    Criação do Banco de Dados              :d2, after d1, 1w
+    Programação do Módulo de Login         :crit, active, 2025-01-22, 1w  
+    **Entrega 1 (Login)** :milestone, m1, 2025-01-28, 0d
+    Programação do CRUD de Empresas        :crit, 2w
+    **Entrega 2 (CRUD)** :milestone, m2, after d6, 0d
+    Implementação do Upload de Logotipo    :crit, 2w
+    **Entrega 3 (Upload)** :milestone, m3, after d7, 0d
+    Desenvolvimento dos Relatórios (PDF/Excel) :crit, 2w
+    **Entrega 4 (Relatórios)** :milestone, m4, after d8, 0d
+    Configuração do Painel Administrativo  :crit, 2w
+    **Entrega 5 (Painel Adm)** :milestone, m5, after d9, 0d
+    
+    section FASE 3: Testes e Implantação
+    Testes Unitários e de Integração (QA)  :t1, after m5, 4w
+    Testes de Usabilidade com Usuários     :t2, after t1, 4w
+    Implantação Final no Servidor e Entrega:t3, after t2, 4w
+    **Entrega Final (Sistema Validado)** :milestone, m6, after t3, 0d
     classDef amarelo fill:#FFD84D, stroke:#000, stroke-width:1px;
     classDef laranja fill:#FFA233, stroke:#000, stroke-width:1px;
     classDef vermelho fill:#E64C3C, stroke:#000, stroke-width:1px;
