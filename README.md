@@ -1,7 +1,7 @@
 # atv-gantt-crystal
 
 ```mermaid
-gantt
+   gantt
     dateFormat  YYYY-MM-DD
     title Cronograma do Projeto - Sistema de Cadastro de Empresas Parceiras
     excludes weekends
