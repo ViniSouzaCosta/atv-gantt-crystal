@@ -31,27 +31,18 @@ gantt
   ```
 ```mermaid
 graph TD
-    subgraph Ciclo_de_Vida_do_Projeto_Crystal
-        A[Requisitos e Documentacao]:::design --> B[Design de Telas]:::design
-        B --> C[Configuracao do Ambiente]:::dev
-        C --> D1[Semana 3: Entrega 1 - Login]:::dev
-        D1 --> R1{Revisao da Diretoria 1}:::review
-        R1 --> D2[Semana 6: Entrega 2 - CRUD de Empresas]:::dev
-        D2 --> R2{Revisao da Diretoria 2}:::review
-        R2 --> D3[Semana 8: Entrega 3 - Upload Logotipo]:::dev
-        D3 --> R3{Revisao da Diretoria 3}:::review
-        R3 --> D4[Semana 10: Entrega 4 - Relatorios]:::dev
-        D4 --> R4{Revisao da Diretoria 4}:::review
-        R4 --> D5[Semana 12: Entrega 5 - Painel Adm]:::dev
-        D5 --> R5{Revisao da Diretoria 5}:::review
-        R5 --> T1[Testes Integracao e QA]:::test
-        T1 --> T2[Testes de Usabilidade]:::test
-        T2 --> F[Mes 6: Implantação e Entrega Final]:::final
+    subgraph Matriz
+        A1[Semana 3 Login Entrega 1]:::branco --> A2[Semana 6 CRUD Empresas Entrega 2]:::amarelo
+        A2 --> A3[Semana 8 Upload Logotipo Entrega 3]:::laranja
+        A3 --> A4[Mês 6 Entrega Final]:::vermelho
+        
+        B1[Semana 10 Relatórios PDF/Excel Entrega 4]:::branco --> B2[Semana 12 Painel Administrativo Entrega 5]:::amarelo
+        B2 --> B3[Testes e Usabilidade]:::laranja
+        B3 --> B4[Mês 6 Sistema Validado]:::vermelho
     end
 
-    classDef design fill:#ADD8E6,stroke:#000,stroke-width:2px;
-    classDef dev fill:#FFD700,stroke:#000,stroke-width:2px;
-    classDef review fill:#FFA233,stroke:#000,stroke-width:2px;
-    classDef test fill:#90EE90,stroke:#000,stroke-width:2px;
-    classDef final fill:#E64C3C,stroke:#000,stroke-width:2px;
+    classDef branco fill:#ffffff,stroke:#000,stroke-width:1px;
+    classDef amarelo fill:#FFD700,stroke:#000,stroke-width:1px;
+    classDef laranja fill:#FFA500,stroke:#000,stroke-width:1px;
+    classDef vermelho fill:#E64C3C,stroke:#000,stroke-width:1px;
 ```
